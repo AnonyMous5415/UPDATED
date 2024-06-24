@@ -1,0 +1,64 @@
+
+game:GetService("StarterGui"):SetCore("SendNotification",{
+Title = "SkillWare",
+Text = "Join discord server!", 
+})
+
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+
+local colors = {
+    SchemeColor = Color3.fromRGB(89, 0, 99),
+    Background = Color3.fromRGB(0, 0, 0),
+    Header = Color3.fromRGB(0, 0, 0),
+    TextColor = Color3.fromRGB(255,255,255),
+    ElementColor = Color3.fromRGB(20, 20, 20)
+}
+ 
+local Window = Library.CreateLib("SkillWare", colors)
+local themes = {
+    "SchemeColor",
+    "Background",
+    "Header",
+    "TextColor",
+    "ElementColor"
+}
+
+--Counter Blox Section
+local CounterBlox = Window:NewTab("Counter blox")
+local CounterBloxSection = CounterBlox:NewSection("                                       COUNTER BLOX")
+
+CounterBloxSection:NewButton("Counter Blox [SkillWare]", "Best FPS Script! (Working!)", function()
+    --[[ WARNING: Heads up! This script has not been verified by ScriptBlox. Use at your own risk! ]] loadstring(game:HttpGet("https://raw.githubusercontent.com/AnonyMous5415/Counter-blox/main/SkillWare", true))()
+end)
+
+CounterBloxSection:NewButton("SkinChanger [Soon]", "UNDETECT! (Comming Soon)", function()
+    --[[ WARNING: Heads up! This script has not been verified by ScriptBlox. Use at your own risk! ]] loadstring(game:HttpGet("", true))()
+end)
+
+local Tab = Window:NewTab("Murder Mystery 2")
+local Section = Tab:NewSection("                                     MURDER MYSTERY 2 ")
+
+
+Section:NewButton("Murder Mystery 2 SkillWare", "UNDETECT", function()
+    loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/AnonyMous5415/MM2/main/SkillWare", true))();
+end)
+
+local Tab = Window:NewTab("Arsenal")
+local Section = Tab:NewSection("                                               ARSENAL")
+
+
+Section:NewButton("Arsenal SkillWare", "UNDETECT FPS!", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/AnonyMous5415/Arsenal/main/Main"))()
+end)
+
+local Tab = Window:NewTab("Discord")
+local Section = Tab:NewSection("                                               DISCORD")
+Section:NewButton("Discord [Click to copy]", "JOIN", function()
+    setclipboard("https://discord.gg/YSx2juqXQ9")
+end)
+
+local Tab = Window:NewTab("Fix")
+local Section = Tab:NewSection("                                        Fixed bug/not work")
+local Section = Tab:NewSection("Discord copy not work [BUG]")
+
+
