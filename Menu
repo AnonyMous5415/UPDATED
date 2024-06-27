@@ -27,8 +27,8 @@ local themes = {
 local CounterBlox = Window:NewTab("Counter blox")
 local CounterBloxSection = CounterBlox:NewSection("                                       COUNTER BLOX")
 
-CounterBloxSection:NewButton("Counter Blox [SkillWare]", "Best FPS Script! (Working!)", function()
-    --[[ WARNING: Heads up! This script has not been verified by ScriptBlox. Use at your own risk! ]] loadstring(game:HttpGet("https://raw.githubusercontent.com/AnonyMous5415/Counter-blox/main/SkillWare", true))()
+CounterBloxSection:NewButton("Counter Blox [SkillWare]", "FREE VERSION!", function()
+    --[[ WARNING: Heads up! This script has not been verified by ScriptBlox. Use at your own risk! ]] loadstring(game:HttpGet("https://raw.githubusercontent.com/AnonyMous5415/SkillWareCB/main/FREE", true))()
 end)
 
 CounterBloxSection:NewButton("SkinChanger [Soon]", "UNDETECT! (Comming Soon)", function()
