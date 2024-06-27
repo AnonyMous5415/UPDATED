@@ -1,0 +1,77 @@
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/AnonyMous5415/Source/main/KeySystem')))()
+local Window = OrionLib:MakeWindow({Name = "SkillWare Menu", HidePremium = false, SaveConfig = true, ConfigFolder = "", IntroText = ""})
+
+
+local Player = game.Players.LocalPlayer
+
+OrionLib:MakeNotification({
+	Name = "Discord (Link For Key)",
+	Content = "https://discord.gg/vRGWcwkH2C",
+	Image = "",
+	Time = 30
+})
+
+--Values
+_G.Key = "FKfa98f98fs7YXDxG9F5G478"
+_G.KeyInput = "string"
+
+
+local function Destroy()
+    game.GetService("CoreGui").OrionLib:Destroy()
+end
+
+local function MainScript()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/AnonyMous5415/UPDATED/main/Menu"))()
+end
+
+local function CorrectKeyNotif()
+    OrionLib:MakeNotification({
+        Name = "Correct Key!",
+        Content = "Loading SkillWare menu!",
+        Image = "",
+        Time = 10
+})
+end
+
+local function IncorrectKeyNotif()
+    OrionLib:MakeNotification({
+        Name = "Your key invalid",
+        Content = "Try again",
+        Image = "rbxassetid://12117215397",
+        Time = 5
+})
+end
+
+local Tab = Window:MakeTab({
+	Name = "Key",
+	Icon = "",
+	PremiumOnly = false
+})
+
+Tab:AddTextbox({
+	Name = "Enter Key Here",
+	Default = "",
+	TextDisappear = true,
+	Callback = function(Value)
+        _G.KeyInput = Value
+	end
+})
+
+Tab:AddButton({
+	Name = "Check Key",
+	Callback = function()
+        if _G.KeyInput == _G.Key then
+            MainScript()
+            CorrectKeyNotif()
+            Destroy()
+        else
+            IncorrectKeyNotif()
+        end
+    end
+})
+
+local Section = Tab:AddSection({
+    Name = "Discord (Key on discord)"
+})
+
+Section:AddParagraph("Join:","https://discord.gg/vRGWcwkH2C")
